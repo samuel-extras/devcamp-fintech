@@ -1,0 +1,28 @@
+<ul class="nav nav-pills alternate flex-lg-column sticky-top">
+    <li class="nav-item">
+        <a class="nav-link {{isActivePage page "profile"}}" href="/profile">
+            <i class="fas fa-user"></i>
+            Personal
+            Information
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {{isActivePage page "change-password"}}" href="/change-password">
+            <i class="fas fa-key"></i>
+            Change Password
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {{isActivePage page "history"}}" href="/history">
+            <i class="fas fa-history"></i>
+            Transaction
+            History
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {{isActivePage page "logout"}}" href="!#" onclick="logout()">
+            <i class="fas fa-arrow-left"></i>
+            Logout
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,42 @@
+<!-- Header -->
+
+{{> header/index }}
+
+<!-- Header end -->
+
+<!-- Page Header -->
+{{> nav/pageHeader }}
+<!-- Page Header end -->
+
+<!-- Content -->
+<main id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <!-- Nav Link -->
+                {{> nav/profileNavLinks }}
+                <!-- Nav Link end -->
+            </div>
+            <div class="col-lg-9">
+                <div class="bg-light shadow-md rounded p-4">
+                    <!-- Personal Information -->
+                    <div class="row">
+                        <div class="col-lg-{{#if noSideDetail }}12{{else }}8{{/if}}">
+                            {{{ body }}}
+                        </div>
+                        {{#if noSideDetail }}
+                        {{else }}
+                        {{> components/profileSideDetail}}
+                        {{/if }}
+                    </div>
+                    <!-- Personal Information end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Content end -->
+<!-- Footer -->
+{{> footer/pages }}
+
+<!-- Footer end -->

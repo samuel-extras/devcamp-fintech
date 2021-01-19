@@ -1,0 +1,40 @@
+<div class="col-lg-4 mb-4 mb-lg-0">
+    <h2 class="text-4 mb-3">CableTv Recharge</h2>
+    <form id="cableTvRechargeBill" method="get" action="/cable-tv/summary">
+        <div class="form-group">
+            <select class="custom-select" name="cable" id="cables" required="">
+                <option value="">Tv Subscription</option>
+                {{#each cables }}
+                <option value="{{product_id}}" title="{{name}}">{{name}}</option>
+                {{/each }}
+            </select>
+            <input type="hidden" name="cableTitle" id="cableTitle">
+        </div>
+        <div class="form-group">
+            <input type="text" name="number" class="form-control" data-bv-field="number" id="smartCardNumber" required
+                placeholder="Enter Smart Card / IUC Number">
+        </div>
+        <div class="form-group">
+            <select class="custom-select" name="plan" id="plan" required="">
+                <option value="">Bouquet/Package</option>
+            </select>
+            <input type="hidden" name="amount" id="amount">
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Continue</button>
+    </form>
+</div>
+<!-- CableTv Recharge end -->
+
+<!-- Slideshow -->
+<div class="col-lg-8">
+    <div class="owl-carousel owl-theme single-slider" data-animateout="fadeOut" data-animatein="fadeIn"
+        data-autoplay="true" data-loop="true" data-autoheight="true" data-nav="true" data-items="1">
+        <div class="item"><a href="#"><img class="img-fluid" src="images/slider/banner-5.jpg" alt="banner 5" /></a>
+        </div>
+        <div class="item"><a href="#"><img class="img-fluid" src="images/slider/banner-9.jpg" alt="banner 8" /></a>
+        </div>
+        <div class="item"><a href="#"><img class="img-fluid" src="images/slider/banner-7.jpg" alt="banner 3" /></a>
+        </div>
+    </div>
+</div>
+<script src="/js/page/cable.js"></script>

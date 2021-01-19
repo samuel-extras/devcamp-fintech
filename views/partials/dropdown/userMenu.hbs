@@ -1,0 +1,14 @@
+<li class="login-signup ml-lg-2 dropdown">
+    <a class="pl-lg-4 pr-0 dropdown-toggle" href="#">
+        {{getDisplayNameFrom user}}
+        <span class="d-none d-lg-inline-block">
+            <i class="fas fa-user"></i>
+        </span>
+    </a>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/profile">Profile</a></li>
+        <li><a class="dropdown-item" href="/change-password">Change Password</a></li>
+        <li><a class="dropdown-item" href="/history">Transaction History</a></li>
+        <li><a class="dropdown-item" href="!#" onclick="logout()">Log Out</a></li>
+    </ul>
+</li>

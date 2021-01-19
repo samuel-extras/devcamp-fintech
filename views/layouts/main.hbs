@@ -1,0 +1,38 @@
+<!-- Header -->
+
+{{> header/index }}
+
+<!-- Header end -->
+<!-- Content -->
+<main id="content">
+
+    <!-- Secondary Navigation -->
+    {{> nav/secondary}}
+    <!-- Secondary Navigation end -->
+    <section class="container">
+        <div class="bg-light shadow-md rounded p-4">
+            <div class="row">
+                {{{ body }}}
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Tab -->
+    {{> tabs/introTabs }}
+    <!-- Intro Tab end -->
+
+    <!-- Refer & Earn  -->
+    {{> components/referAndEarn }}
+    <!-- Refer & Earn end -->
+
+    <!-- Mobile App -->
+    {{> components/mobileShower }}
+    <!-- Mobile App end -->
+
+</main>
+<!-- Content end -->
+<!-- Footer -->
+
+{{> footer/index }}
+
+<!-- Footer end -->

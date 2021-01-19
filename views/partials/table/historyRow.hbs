@@ -1,0 +1,18 @@
+<tr>
+    <td class="align-middle">{{getTransactionValue transaction "date"}}</td>
+    <td class="align-middle"><img src="images/{{ getTransactionValue transaction "type" }}.png" width="60"
+            class="img-thumbnail d-inline-flex mr-1">
+        <span class="text-1 d-inline-flex">{{getTransactionValue transaction "orderType"}}</span></td>
+    <td class="align-middle">{{getTransactionValue transaction "transactionId"}}</td>
+    <td class="align-middle text-center">
+        {{#if (statusIsOk (getTransactionValue transaction "status")) }}
+        <i class="fas fa-check-circle text-4 text-success" data-toggle="tooltip"
+            data-original-title="Your Transaction Was Successful"></i>
+        {{else }}
+        <i class="fas fa-times-circle text-4 text-danger" data-toggle="tooltip"
+            data-original-title="Your Transaction Failed"></i>
+        {{/if }}</td>
+    <td class="align-middle text-right">₦{{ getTransactionValue transaction "amount"}}</td>
+    <!-- <td class="align-middle text-center"><a href="/transaction/{{getTransactionValue transaction "_id"}}"
+            data-toggle="tooltip" data-original-title="View Transaction"><i class="fas fa-eye"></i></a></td> -->
+</tr>

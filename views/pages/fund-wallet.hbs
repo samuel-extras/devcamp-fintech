@@ -1,0 +1,76 @@
+<!-- Buy Airtime -->
+<div class="col-lg-4 mb-4 mb-lg-0">
+    <h2 class="text-4 mb-3">Fund Wallet</h2>
+    <form id="fund-wallet" method="get">
+        <!-- TODO: Add a Payment option (radio buttons) -->
+        <div class="form-group">
+            <input class="form-control" name="amount" id="amount" placeholder="Amount" required type="number">
+        </div>
+        <button class="btn btn-primary btn-block" id="buy-airtime-submit" type="submit">
+            Fund
+        </button>
+    </form>
+</div>
+<!-- Buy Airtime end -->
+
+<!-- Slideshow -->
+<div class="col-lg-8">
+    <div class="owl-carousel owl-theme single-slider" data-animateout="fadeOut" data-animatein="fadeIn"
+        data-autoplay="true" data-loop="true" data-autoheight="true" data-nav="true" data-items="1">
+        <div class="item">
+            <a href="#">
+                <img class="img-fluid" src="images/slider/banner-7.jpg" alt="banner 3" />
+            </a>
+        </div>
+        <div class="item">
+            <a href="#">
+                <img class="img-fluid" src="images/slider/banner-5.jpg" alt="banner 5" />
+            </a>
+        </div>
+    </div>
+</div>
+<script src='https://js.paystack.co/v1/inline.js'></script>
+<script type="text/javascript">
+    const verifyFunds = async (response) => {
+        try {
+            const res = await fetcher.post(`/api/user/fundWallet`, { ref: response.reference });
+
+            if (res.status === "fail" || res.status === "error")
+                return alert.error("Transaction Failed And Account Wasn't Charged. Please Try Again.");
+
+            alert.info(
+                "Your Payment Is Being Processed. Your Account Will Be Funded When Payment Has Been Received!"
+            )
+            setTimeout(() => location.assign("/"), 3000)
+        } catch (e) {
+            console.log(e)
+            alert.error(e.message);
+        }
+    }
+
+    const makePayment = (e) => {
+        e.preventDefault();
+
+        const key = "{{key}}";
+        const ref = "{{ref}}";
+        const email = "{{getEmailFrom user}}";
+        const amount = document.querySelector("#amount").value * 100;
+        console.log(key, ref, email, amount)
+        const handler = PaystackPop.setup({
+            key, // This is your public key only! 
+            email, // Customers email
+            amount, // The amount charged, I like big money lol
+            ref, // Generate a random reference number and put here",
+            callback: (response) => verifyFunds(response),
+            onClose: () => alert.warning(
+                "Transaction Not Completed, Window Closed."
+            )
+        });
+
+        // Payment Request Just Fired  
+        handler.openIframe();
+    }
+
+    document.querySelector("#fund-wallet").addEventListener("submit", makePayment);
+</script>
+<!-- Slideshow end -->

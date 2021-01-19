@@ -1,0 +1,10 @@
+<h4 class="mb-3">Transactions History</h4>
+{{> tabs/historyTab}}
+<div class="tab-content my-3" id="myTabContent">
+    {{> table/history trx_type="all" active="active"}}
+    {{> table/history trx_type="airtime" }}
+    {{> table/history trx_type="data_bundle" }}
+    {{> table/history trx_type="cable" }}
+    {{> table/history trx_type="electricity" }}
+    {{> table/history trx_type="transfer_fund" }}
+</div>

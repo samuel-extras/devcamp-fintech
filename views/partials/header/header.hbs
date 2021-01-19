@@ -1,0 +1,56 @@
+<header id="header">
+    <div class="container">
+        <div class="header-row">
+            <div class="header-column justify-content-start">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="/" title="Wootlab Devcamp">
+                        <img src="https://www.wootlab.ng/images/logo.png" alt="wootlab devcamp" width="127" height="29" />
+                    </a>
+                </div>
+                <!-- Logo end -->
+            </div>
+            <div class="header-column justify-content-end">
+                <!-- Primary Navigation -->
+                <nav class="primary-menu navbar navbar-expand-lg" style="z-index: 10000;">
+                    <div id="header-nav" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="{{isActivePage page "home"}}">
+                                <a href="/">Home</a>
+                            </li>
+                            <li class="{{isActivePage page "about"}}">
+                                <a href="about">About</a>
+                            </li>
+                            <li class="{{isActivePage page "contact"}}">
+                                <a href="contact">Contact</a>
+                            </li>
+                            <li class="{{isActivePage page "faq"}}">
+                                <a href="/faq">FAQ</a>
+                            </li>
+                            {{#if user }}
+                            {{> dropdown/userMenu }}
+                            {{else }}
+                            <li class="login-signup ml-lg-2">
+                                <a class="pl-lg-4 pr-0" href="/auth" title="Login / Sign up">
+                                    Login / Sign up
+                                    <span class="d-none d-lg-inline-block">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {{/if }}
+                        </ul>
+                    </div>
+                </nav>
+                <!-- Primary Navigation end -->
+            </div>
+            <!-- Collapse Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+       

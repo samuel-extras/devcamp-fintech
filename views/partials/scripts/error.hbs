@@ -1,0 +1,14 @@
+<script>
+    const showServerError = () => {
+        const errorMsg = "{{msg}}";
+        const statusCode = Number("{{statusCode}}");
+        switch (statusCode) {
+            case 401:
+                return alert.warning(errorMsg, 10000);
+            default:
+                if (errorMsg.length) alert.error(errorMsg, 10000);
+        }
+    };
+
+    window.addEventListener("load", showServerError);
+</script>

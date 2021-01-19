@@ -1,0 +1,27 @@
+<!-- Header -->
+
+{{> header/index summary=true }}
+
+<!-- Header end -->
+<!-- Content -->
+<main id="content">
+    <section class="container">
+        <div class="row mt-5">
+            <div class="col-lg-11 mx-auto">
+                {{> tabs/summaryStepper }}
+                {{> components/summaryTitle }}
+                <div class="col-md-8 col-lg-6 col-xl-5 mx-auto">
+                    <div class="bg-light shadow-sm rounded p-3 p-sm-4 mb-0 mb-sm-4">
+                        {{{ body }}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- Content end -->
+<!-- Footer -->
+
+{{> footer/index }}
+
+<!-- Footer end -->

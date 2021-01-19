@@ -1,0 +1,38 @@
+<form id="airtime-summary-form" method="post">
+    <div class="row">
+        <p class="col-sm text-muted mb-0 mb-sm-3">Mobile Number:</p>
+        <p class="col-sm text-sm-right font-weight-500">{{mobile}}</p>
+        <input type="hidden" value="{{mobile}}" id="mobileNumber">
+    </div>
+    <div class="row">
+        <p class="col-sm text-muted mb-0 mb-sm-3">Operator/Network:</p>
+        <p class="col-sm text-sm-right font-weight-500">{{network}}</p>
+    </div>
+    <div class="row">
+        <p class="col-sm text-muted mb-0 mb-sm-3">Type:</p>
+        <p class="col-sm text-sm-right font-weight-500">Mobile top-up</p>
+    </div>
+    <div class="row">
+        <p class="col-sm text-muted mb-0 mb-sm-3">Amount:</p>
+        <p class="col-sm text-sm-right font-weight-500">{{amount}}</p>
+        <input type="hidden" value="{{amount}}" id="amount">
+    </div>
+    <div class="row">
+        <p class="col-12 text-muted mb-0">Plan Description:</p>
+        <p class="col-12 text-1">
+            Airtime summary for {{amount}} {{network}} Mobile top-up at the rate of ₦{{getAmountByRate amount rate }}
+        </p>
+    </div>
+
+    <div class="bg-light-4 rounded p-3">
+        <div class="row">
+            <div class="col-sm text-3 font-weight-600">Payment Amount</div>
+            <div class="col-sm text-sm-right text-5 font-weight-500">₦{{getAmountByRate amount rate }}</div>
+        </div>
+    </div>
+
+    <p class="mt-4 mb-0">
+        <button type="submit" id="submitButton" class="btn btn-primary btn-block">Buy Airtime</button>
+    </p>
+</form>
+<script src="/js/page/airtimeSummary.js"></script>

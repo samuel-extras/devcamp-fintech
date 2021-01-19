@@ -1,0 +1,24 @@
+<h4 class="mb-4">Personal Information</h4>
+<form id="personalInformation" method="post">
+    <div class="form-group">
+        <label for="updateFullname">Full Name</label>
+        <input type="text" value="{{getFullNameFrom user}}" class="form-control" data-bv-field="fullName"
+            id="updateFullname" required placeholder="Full Name">
+    </div>
+    <div class="form-group">
+        <label for="updateMobile">Mobile Number</label>
+        <input type="text" value="{{getMobileFrom user}}" class="form-control" data-bv-field="mobilenumber"
+            id="updateMobile" required placeholder="Mobile Number">
+    </div>
+    <div class="form-group">
+        <label for="updateEmail">Email ID</label>
+        <input type="text" value="{{getEmailFrom user}}" class="form-control" data-bv-field="emailid" id="updateEmail"
+            required placeholder="Email ID">
+    </div>
+    <div class="form-group">
+        <label for="walletBalance">Wallet Balance</label>
+        <input type="text" class="form-control" value="₦{{getWalletBalanceFrom user }}" disabled>
+    </div>
+    <button class="btn btn-primary" id="submitButton" type="submit">Update</button>
+</form>
+<script src="js/page/profile.js"></script>

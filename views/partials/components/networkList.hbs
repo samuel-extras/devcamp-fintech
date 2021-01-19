@@ -1,0 +1,13 @@
+<ul style="display: none;" id="networks">
+    {{#each networks }}
+    <li code="{{code}}" val="{{value}}" label="{{label}}">
+        {{#if dataPlans.length }}
+        <ul>
+            {{#each dataPlans }}
+            <li class="network-data-plans" amount="{{amount}}" code="{{code}}" val="{{value}}"></li>
+            {{/each }}
+        </ul>
+        {{/if }}
+    </li>
+    {{/each }}
+</ul>

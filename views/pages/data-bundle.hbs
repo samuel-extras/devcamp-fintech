@@ -1,0 +1,42 @@
+<div class="col-lg-4 mb-4 mb-lg-0">
+    <h2 class="text-4 mb-3">Buy Data Bundle</h2>
+    <form id="buy-data-bundle" method="get" action="/buy-data/summary">
+        <div class="form-group">
+            <input type="text" class="form-control" name="mobile" data-bv-field="number" id="mobileNumber" required
+                placeholder="Enter Telephone Number" value="+234">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="network" data-bv-field="number" id="mobileNetwork" required
+                placeholder="Mobile Network">
+        </div>
+        <div class="form-group">
+            <select class="custom-select" name="plans" id="plans" required="">
+                <option value="">Data Bundle Plan</option>
+            </select>
+        </div>
+        <input type="hidden" name="amount" id="bundleAmount">
+        <button class="btn btn-primary btn-block" type="submit">Buy Data Bundle</button>
+    </form>
+</div>
+<!-- Slideshow -->
+<div class="col-lg-8">
+    <div class="owl-carousel owl-theme single-slider" data-animateout="fadeOut" data-animatein="fadeIn"
+        data-autoplay="true" data-loop="true" data-autoheight="true" data-nav="true" data-items="1">
+        <div class="item">
+            <a href="#">
+                <img class="img-fluid" src="images/slider/banner-4.jpg" alt="banner 4" />
+            </a>
+        </div>
+        <div class="item">
+            <a href="#">
+                <img class="img-fluid" src="images/slider/banner-7.jpg" alt="banner 3" />
+            </a>
+        </div>
+        <div class="item">
+            <a href="#">
+                <img class="img-fluid" src="images/slider/banner-5.jpg" alt="banner 5" />
+            </a>
+        </div>
+    </div>
+</div>
+<script src="/js/page/data-bundle.js"></script>

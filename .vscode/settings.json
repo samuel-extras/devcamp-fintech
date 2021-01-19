@@ -1,0 +1,8 @@
+{
+  "editor.autoIndent": "advanced",
+  "editor.wrappingIndent": "indent",
+  "editor.fontFamily": "JetBrains Mono, Fira Code, monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 28,
+}
