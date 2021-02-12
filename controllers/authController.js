@@ -51,7 +51,6 @@ const createSendToken = (user, statusCode, req, res) => {
  * Sign Up a new User
  */
 exports.signup = catchAsync(async (req, res, next) => {
-  console.log("_________body", req.body);
   const newUser = await User.create({
     fullname: req.body.fullname,
     email: req.body.email,
@@ -60,6 +59,8 @@ exports.signup = catchAsync(async (req, res, next) => {
     passwordConfirm: req.body.passwordConfirm,
     referrer: req.body.referrer,
   });
+
+  console.log(newUser, "=====")
 
   const url = `${req.protocol}://${req.get("host")}/me`;
   // TODO: await new Email(newUser, url).sendWelcome();

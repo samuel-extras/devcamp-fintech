@@ -4,6 +4,7 @@ const authController = require("./../controllers/authController");
 
 const router = express.Router();
 
+router.get("/", views.useNoLayout, views.home);
 router.get(
   "/profile",
   views.useProfileLayout,
@@ -59,9 +60,7 @@ router.get("/transfer-fund", authController.protect, views.transferFund);
 
 router.use(authController.isLoggedIn);
 
-router.get("/", views.home);
-
-router.get("/buy-airtime", views.home);
+router.get("/buy-airtime", views.airtime);
 router.get("/buy-data", views.dataBundle);
 router.get("/cable-tv", views.cableTv);
 router.get("/electric-bill", views.electricBill);

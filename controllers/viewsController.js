@@ -6,6 +6,10 @@ const Transaction = require("../models/TransactionModel");
 const { getElectricCompany } = require("../utils/transactionApi");
 
 exports.home = (req, res, next) => {
+  res.render("pages");
+};
+
+exports.airtime = (req, res, next) => {
   const page = req.url.slice(1, req.url.length);
   res.render("pages/home", {
     page,
@@ -264,6 +268,11 @@ exports.electricSummary = (req, res, next) => {
   res.render("pages/summary/electric", {
     title: "Electricity Bill Payment",
   });
+};
+
+exports.useNoLayout = (req, res, next) => {
+  res.locals.layout = undefined;
+  next();
 };
 
 exports.usePagesLayout = (req, res, next) => {
