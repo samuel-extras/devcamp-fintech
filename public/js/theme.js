@@ -1,7 +1,3 @@
-/*
-Template:  		Quickai HTML5 Template
-Written by: 	Harnish Design - (http://www.harnishdesign.net)
-*/
 
 (function ($) {
 	"use strict";

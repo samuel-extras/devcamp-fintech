@@ -153,8 +153,8 @@ footer a {
   -ms-transform-origin: 0 100%;
   transform-origin: 0 100%;
   z-index: -2;
-  background: #0d6efd;
-  color: #0d6efd;
+  background: #0c2f55 !important;
+  color: #0c2f55 !important;
   background: -webkit-linear-gradient(45deg, #0d6efd, #0d6efd 50%);
   background: linear-gradient(45deg, #0d6efd, #0d6efd 50%);
 }
@@ -208,7 +208,7 @@ footer a {
   top: calc(100% - -51px);
 }
 #home #payment-sol .card {
-  background-color: #0d6efd;
+  background-color: #0c2f55 !important;
   box-shadow: 0 2px 15px rgba(17, 29, 143, 0.11);
   border-radius: 5px;
   color: #fff;

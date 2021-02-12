@@ -11,7 +11,7 @@
     "Payment",
     "Bill"
   ],
-  "author": "Tom The Builder",
+  "author": "Samuel Ajibola",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",

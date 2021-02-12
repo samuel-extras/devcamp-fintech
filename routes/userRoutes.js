@@ -7,7 +7,7 @@ const router = express.Router();
 /**
  * Account Creation and Authentication
  */
-router.post("/signup", authController.signup);
+router.post("/signup", (req, res) => console.log(req.body));
 router.post("/login", authController.login);
 router.post("/login", authController.login);
 router.get("/logout", authController.logout);

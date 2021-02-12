@@ -15,55 +15,50 @@
     </ul>
     <div class="tab-content pt-4">
         <div class="tab-pane fade show active" id="loginPage" role="tabpanel" aria-labelledby="login-page-tab">
-            <p>Don't have an account? <a>sign up </a></p>
             <form id="loginForm" method="post">
-  
-  <div class="segment">
-  </div>
-  
-  <label>
-    <input type="text" placeholder="Email Address"  id="loginEmail" required/>
-  </label>
-  <label>
-    <input type="password"  id="loginPassword" placeholder="Password" required/>
-  </label>
-  <button class="red" type="submit"> Log in</button>
-  
-  <div class="segment">
-    <button class="unit" type="button" data-toggle="tooltip" data-placement="left" title="back"><i class="fas fa-arrow-left"></i></button>
-    <button class="unit" type="button" data-toggle="tooltip" data-placement="right" title="Reset Password"><i class="fas fa-users-cog"></i></button>
-  </div>
-  
-  
-  
-</form>
-            
+                <div class="form-group">
+                    <label for="loginEmail">Phone / Email ID</label>
+                    <input type="text" class="form-control" id="loginEmail" required
+                        placeholder="Enter Phone / Email ID">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" class="form-control" id="loginPassword" required placeholder="Password">
+                </div>
+                <div class="row mb-4">
+                    <div class="col-sm text-right"> <a class="justify-content-end" href="#">Forgot Password ?</a> </div>
+                </div>
+                <button class="btn btn-primary btn-block" id="loginButton" type="submit">Login</button>
+            </form>
         </div>
         <div class="tab-pane fade" id="signupPage" role="tabpanel" aria-labelledby="signup-page-tab">
-                        <p class="mb-4">Already have an account? <a>Log In </a></p>
-
             <form id="signupForm" method="post">
-                <label >
-                    <input type="text"  data-bv-field="number" id="signupFullname" required
+                <div class="form-group">
+                    <label for="signupFullname">Full Name</label>
+                    <input type="text" class="form-control" data-bv-field="number" id="signupFullname" required
                         placeholder="Enter Your Full Name">
-                </label>
-                <label >
-                    <input type="text" data-bv-field="number" id="signupEmail" required
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="text" class="form-control" data-bv-field="number" id="signupEmail" required
                         placeholder="Email ID">
-                </label>
-                <label >
-                    <input type="text"  id="signupMobile" required placeholder="Mobile Number">
-                </label>
-                <label >
-                    <input type="password"  id="signupPassword" required placeholder="Password">
-                </label>
-                <label >
-                    <input type="password"  id="signupConfirmPassword" required
+                </div>
+                <div class="form-group">
+                    <label for="signupMobile">Mobile Number</label>
+                    <input type="text" class="form-control" id="signupMobile" required placeholder="Mobile Number">
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" class="form-control" id="signupPassword" required placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="signupConfirmPassword" required
                         placeholder="Confirm Password">
-                </label>
-  <button class="red" type="submit"> Sign Up</button>
+                </div>
+                <button class="btn btn-primary btn-block" type="submit" id="signupButton">Signup</button>
             </form>
         </div>
     </div>
 </div>
-<script src="js/page/loginAndSignup.js"></script>
+<script src="js/page/loginAndSignup.js"></script> 

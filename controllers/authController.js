@@ -51,6 +51,7 @@ const createSendToken = (user, statusCode, req, res) => {
  * Sign Up a new User
  */
 exports.signup = catchAsync(async (req, res, next) => {
+  console.log("_________body", req.body);
   const newUser = await User.create({
     fullname: req.body.fullname,
     email: req.body.email,
@@ -74,10 +75,14 @@ exports.login = catchAsync(async (req, res, next) => {
 
   // 1) Check if email and password exist
   if (!email.trim() || !password.trim()) {
-    return next(new AppError("Please provide phone / email and password!", 400));
+    return next(
+      new AppError("Please provide phone / email and password!", 400)
+    );
   }
   // 2) Check if user exists && password is correct
-  const user = await User.findOne({ $or: [{ email }, { phone: email }] }).select("+password");
+  const user = await User.findOne({
+    $or: [{ email }, { phone: email }],
+  }).select("+password");
 
   if (!user || !(await user.correctPassword(password, user.password))) {
     return next(new AppError("Incorrect email or password", 401));
