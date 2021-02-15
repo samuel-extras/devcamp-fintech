@@ -129,10 +129,7 @@ footer a {
 #home .hiring-btn:before {
   background-color: rgba(255, 255, 255, 0.5);
 }
-#home .rzp-logo {
-  background: url(assets/razorpay-logo-white.svg) center no-repeat;
-  background-size: contain;
-}
+
 #home #main-content {
   z-index: 2;
   position: relative;
@@ -716,7 +713,6 @@ section {
 .rzp-logo {
   width: 125px;
   height: 32px;
-  background: url(assets/razorpay-logo.svg) center no-repeat;
   background-size: contain;
 }
 .hiring-btn {
@@ -1077,16 +1073,7 @@ section {
   margin: 0;
   max-width: 390px;
 }
-#razorpay-x-credit-cards-modal .after-success {
-  background: #212c47;
-}
-#razorpay-x-credit-cards-modal .after-success h2 {
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  color: #fff !important;
-}
+
 .nav-icon {
   width: 20px;
   height: 20px;
@@ -1741,10 +1728,6 @@ nav .button-anchor {
   }
 }
 .topbar-container {
-  background-image: url(assets/topbar/unlock-growth/desk-banner.svg),
-    -webkit-linear-gradient(358.29deg, #fff 0.03%, #fff 90.98%);
-  background-image: url(assets/topbar/unlock-growth/desk-banner.svg),
-    linear-gradient(91.71deg, #fff 0.03%, #fff 90.98%);
   text-align: center;
   color: #0054a2;
   padding: 8px 0;
@@ -1855,47 +1838,6 @@ nav .button-anchor {
 .hide {
   display: none !important;
 }
-#fake-chat-icon {
-  background-color: #528ff0;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 13px 18px;
-  width: 58px;
-  height: 58px;
-  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15), 0 5px 4px 0 rgba(0, 0, 0, 0.26) !important;
-  z-index: 100000000;
-  margin: 30px;
-  border-radius: 34px 8px 34px 34px;
-}
-#fake-chat-icon .chat-icon {
-  background: #fff;
-  border-radius: 6px 6px 6px 1px;
-  width: 24px;
-  height: 18px;
-  position: relative;
-  display: inline-block;
-  vertical-align: bottom;
-}
-#fake-chat-icon .chat-icon:after,
-#fake-chat-icon .chat-icon:before {
-  content: "";
-  height: 1.5px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  border-radius: 0 50px;
-  background-color: #528ff0;
-  margin: 0 2px;
-}
-#fake-chat-icon .chat-icon:before {
-  width: 65%;
-  top: 6px;
-}
-#fake-chat-icon .chat-icon:after {
-  width: 50%;
-  top: 12px;
-}
 .lazy {
   visibility: hidden;
 }
@@ -1952,33 +1894,4 @@ nav .button-anchor {
   background-color: #2783f3;
   color: #fff;
   border-color: #2783f3;
-}
-#testimonials .testimonials .prev-arrow {
-  position: absolute;
-  bottom: -66px;
-  width: 46px;
-  height: 46px;
-  border: 1px solid rgba(51, 107, 196, 0.16);
-  border-radius: 50%;
-  box-shadow: 0 4px 8px 0 rgba(35, 43, 48, 0.06);
-  z-index: 199;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-#testimonials .testimonials .prev-arrow.hide {
-  opacity: 0;
-}
-#testimonials .testimonials .prev-arrow {
-  left: calc(50% - 93px - 8px);
-  background-position-x: 15px;
-}
-#testimonials .testimonials .prev-arrow.hide {
-  -webkit-transform: translateX(-12px);
-  -ms-transform: translateX(-12px);
-  transform: translateX(-12px);
-}
-@media (max-width: 767px) {
-  #testimonials .testimonials .prev-arrow {
-    left: 30%;
-  }
 }
