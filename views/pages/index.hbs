@@ -27,7 +27,7 @@
     </div>
     <div id="page">
         <nav>
-            <div id="ham-menu">
+            <div class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-nav" id="ham-menu">
                 <div id="ham-menu-inner">
                     <div class="spoke"> </div>
                     <div class="spoke"></div>
@@ -43,15 +43,11 @@
             <div class="mob" id="nav-mob-header-copy">
                 <div class="menu-header">Menu</div>
             </div>
-            <div class="backdrop mob">
-
-            </div>
+            
             <div class="loading" id="nav">
-                <div class="backdrop nomob">
-
-                </div>
+                
                 <div class="container">
-                    <a class="rzp-logo" href="index.html" data-lytics="click"
+                    <a class="rzp-logo" href="/" data-lytics="click"
                         data-lytics-category="Website - Navigation" data-lytics-action="Click - Logo">
                         <img src="https://www.wootlab.ng/images/logo.png" alt="">
                     </a>
@@ -77,7 +73,7 @@
                             </a>
                         </li>
                         <li class="nav-item nav-menu nav3" data-nav-item-id="about">
-                            <a class="nav-item nav5" data-nav-item-id="pricing" href="pricing/index.html"
+                            <a class="nav-item nav5" data-nav-item-id="pricing" href="/about"
                                 data-lytics="click" data-lytics-category="Website - Navigation"
                                 data-lytics-action="Click - Nav Link" data-lytics-label="about">
 
@@ -85,9 +81,9 @@
                             </a>
 
                         </li>
-                        <li class="nav-item nav-menu nav3" data-nav-item-id="about">
+                        <li class="nav-item nav-menu nav3" data-nav-item-id="contact">
 
-                            <a class="nav-item nav5" data-nav-item-id="pricing" href="pricing/index.html"
+                            <a class="nav-item nav5" data-nav-item-id="pricing" href="/contact"
                                 data-lytics="click" data-lytics-category="Website - Navigation"
                                 data-lytics-action="Click - Nav Link" data-lytics-label="contact">
                                 <span class="nav-category">Contact</span>
@@ -95,9 +91,12 @@
                         </li>
 
                         <div class="nav-line"></div>
+                         {{#if user }}
+                            {{> dropdown/userMenu }}
+                            {{else }}
                         <div class="right">
                             <li class="nav-item">
-                                <a class="login-link" href="" id="nav-signin" data-lytics="click"
+                                <a class="login-link" href="/auth" id="nav-signin" data-lytics="click"
                                     data-lytics-category="Website - Navigation" data-lytics-action="Click - Log In">
                                     <span class="nav-category">Log In</span>
                                 </a>
@@ -116,6 +115,8 @@
                                 <a class="login-link" href="/auth">Sign Up</a>
                             </li>
                         </div>
+                                                    {{/if }}
+
                     </ul>
                     <div class="nav-box">
 
@@ -135,18 +136,22 @@
                     <div class="container content">
                         <div class="header">
                             <h1 class="pre">Wootlab makes Easier,
-                                Do everything with ease</h1>
+Do everything with ease</h1>
                             <p class="size-lg">Do all types of transaction with Wootlab.
                                 Pay Electricity bills, purchase Airtime, Buy Data Bundle,
                                 And also Subscribe to your Cable TV
                             </p>
-                        </div>
-                        <a class="button-anchor" href="/auth" text="Sign Up Now" data-lytics="click"
-                            data-lytics-category="Website - Landing" data-lytics-action="Click - Signup" theme="blue">
-                            <div class="button-anchor-wrapper  blue">
-                                <span>Sign Up Now</span>
-                            </div>
-                        </a>
+                             {{#if user }}
+                            <a class="button-anchor" href="/auth" text="Sign Up Now" data-lytics="click" data-lytics-category="Website - Landing" data-lytics-action="Click - Signup" theme="blue">
+<div class="button-anchor-wrapper  blue">
+  <span>Explore Now</span>
+  </div></a>
+                            {{else }}
+                       <a class="button-anchor" href="/auth" text="Sign Up Now" data-lytics="click" data-lytics-category="Website - Landing" data-lytics-action="Click - Signup" theme="blue">
+<div class="button-anchor-wrapper  blue">
+  <span>Sign Up Now</span>
+  </div></a>
+   {{/if }}
                     </div>
                 </div>
             </section>
@@ -156,7 +161,7 @@
                         <h2 class="center">All Services</h2>
                         <div class="row">
                             <div class="col-md-4 col-sm-6 col-lg-3 mt-3">
-                                <a class="smooth-scroll" href="index.html#products-section" data-lytics="click"
+                                <a class="smooth-scroll" href="/buy-airtime" data-lytics="click"
                                     data-lytics-category="Website - BU Listing" data-lytics-action="Click - BU Card"
                                     data-lytics-label="Razorpay Payments">
                                     <div class="card accept-payments lazy"
@@ -168,7 +173,7 @@
                                 </a>
                             </div>
                             <div class="col-md-4 col-sm-6 col-lg-3 mt-3">
-                                <a href="x/index.html" data-lytics="click" data-lytics-category="Website - BU Listing"
+                                <a href="/buy-data" data-lytics="click" data-lytics-category="Website - BU Listing"
                                     data-lytics-action="Click - BU Card" data-lytics-label="Razorpay X">
                                     <div class="card x lazy"
                                         data-bg="url(https://www.flashmobile.com.ng/static/homepage/img/buy-data.svg)">
@@ -179,7 +184,7 @@
                                 </a>
                             </div>
                             <div class=" col-md-4 col-sm-6 col-lg-3 mt-3">
-                                <a href="capital/index.html" data-lytics="click"
+                                <a href="/cable-tv" data-lytics="click"
                                     data-lytics-category="Website - BU Listing" data-lytics-action="Click - BU Card"
                                     data-lytics-label="services">
                                     <div class="card capital lazy" data-bg="url()">
@@ -189,7 +194,7 @@
                                 </a>
                             </div>
                             <div class=" col-md-4 col-sm-6 col-lg-3 mt-3">
-                                <a href="capital/index.html" data-lytics="click"
+                                <a href="electricity-bill" data-lytics="click"
                                     data-lytics-category="Website - BU Listing" data-lytics-action="Click - BU Card"
                                     data-lytics-label="services">
                                     <div class="card capital lazy" data-bg="url()">

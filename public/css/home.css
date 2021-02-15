@@ -8,7 +8,7 @@
     url(fonts/fonticon.ttf) format("truetype"),
     url(fonts/fonticon.svg#icons) format("svg");
 }
-a{
+a {
   text-decoration: none !important;
   color: inherit !important;
 }
@@ -21,6 +21,45 @@ footer a {
   right: 80px;
   top: -3px;
 }
+/*-------- Preloader --------*/
+#preloader {
+  position: fixed;
+  z-index: 999999999 !important;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+#preloader [data-loader="dual-ring"] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  display: inline-block;
+  content: " ";
+  display: block;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #0071cc;
+  border-color: #0071cc transparent #0071cc transparent;
+  animation: dual-ring 1.2s linear infinite;
+}
+
+@keyframes dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 1023px) {
   #home #ham-menu .spoke {
     background: #fff;
