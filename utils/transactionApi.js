@@ -110,19 +110,23 @@ exports.getCablePlansFor = async (product, number) => {
     product,
     number,
   };
-
+console.log(data);
   try {
     const res = await axiosForm(
       "https://estoresms.com/bill_payment_processing/v/2/",
       data
     );
+    console.log(res.data);
+
 
     if (res.data.response !== "OK")
       throw new Error(`Error getting Data Product List: ${res.data.message}`);
 
     return res.data;
   } catch (e) {
+    console.log(e);
     throw e;
+
   }
 };
 
