@@ -41,6 +41,7 @@ const initCablePlans = async (cable, number) => {
       return alert.error(eMssg);
     setCablePlans(res.data);
   } catch (e) {
+    console.log(e)
     alert.error(eMssg);
   }
 };
