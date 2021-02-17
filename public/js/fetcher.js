@@ -1,5 +1,4 @@
 const push = async (url, method, data, headers) => {
-  
   try {
     const res = await fetch(url, {
       method,
@@ -9,7 +8,7 @@ const push = async (url, method, data, headers) => {
       },
       body: JSON.stringify(data),
     });
-    console.log(res)
+    console.log(res);
     return await res.json();
   } catch (e) {
     console.log(e);
@@ -22,8 +21,10 @@ const request = () => {
     get: async (url) => {
       try {
         const res = await fetch(url);
+        console.log(res);
         return await res.json();
       } catch (e) {
+        console.log(e);
         throw e;
       }
     },
