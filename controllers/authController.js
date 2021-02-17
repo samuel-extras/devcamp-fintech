@@ -4,7 +4,6 @@ const jwt = require("jsonwebtoken");
 const User = require("./../models/userModel");
 const catchAsync = require("./../utils/catchAsync");
 const AppError = require("./../utils/appError");
-
 /**
  * Sign a JWT with a user id as the payload
  * @param id
